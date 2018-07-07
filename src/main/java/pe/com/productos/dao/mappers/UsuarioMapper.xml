@@ -4,7 +4,7 @@
 
 <mapper namespace="pe.com.productos.dao.espec.UsuarioMapper">
 
-	<select id="traerUsuario" resultType="UsuarioBean">
+	<select id="traerUsuario" resultType="pe.com.productos.model.UsuarioBean">
 		select idusu, usuario
 		from usuario
 		where usuario=#{usuario}

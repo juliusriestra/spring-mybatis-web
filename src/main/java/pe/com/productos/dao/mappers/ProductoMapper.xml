@@ -4,14 +4,14 @@
 
 <mapper namespace="pe.com.productos.dao.espec.ProductoMapper">
 
-	<select id="traerTodos" resultType="ProductoBean">
+	<select id="traerTodos" resultType="pe.com.productos.model.ProductoBean">
 		select p.idprod, p.idcat,
 		p.nombre, p.precio, p.stock, c.nombre categoria
 		from producto p join
 		categoria c on p.idcat = c.idcat
 	</select>
 
-	<insert id="insertar" parameterType="ProductoBean"
+	<insert id="insertar" parameterType="pe.com.productos.model.ProductoBean"
 		useGeneratedKeys="true" keyColumn="idprod" keyProperty="idprod">
 		insert into producto(idcat,nombre,precio,stock)
 		values(#{idcat},#{nombre},#{precio},#{stock})
