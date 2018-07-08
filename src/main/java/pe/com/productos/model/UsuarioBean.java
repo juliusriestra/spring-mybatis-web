@@ -8,7 +8,6 @@ public class UsuarioBean {
 	private boolean estado;
 
 	public UsuarioBean() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Integer getIdusu() {

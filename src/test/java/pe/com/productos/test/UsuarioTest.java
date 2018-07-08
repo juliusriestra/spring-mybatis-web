@@ -28,7 +28,7 @@ public class UsuarioTest {
 		usuarioService = null;
 	}
 	@Test
-	public void validar() {
+	public void validar() throws Exception {
 		UsuarioBean userBean = new UsuarioBean();
 		userBean = usuarioService.validar("jriestra","suerte");
 		assert(userBean!=null);
