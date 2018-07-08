@@ -13,7 +13,7 @@ public class UsuarioService {
 	@Autowired
 	private UsuarioMapper usuarioMapper;
 	
-	public UsuarioBean validar(String usuario, String clave){
+	public UsuarioBean validar(String usuario, String clave) throws RuntimeException {
 		UsuarioBean bean = usuarioMapper.traerUsuario(usuario, clave);
 		if(bean == null){
 			throw new RuntimeException("Error, datos incorrectos.");
